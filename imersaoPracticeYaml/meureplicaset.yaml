@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: meureplicaset
+spec:
+  replicas: 5 #aqui onde são especificados o conjunto de repliacas desejados
+  selector:
+    matchLabels:
+      app: meupod
+  template:
+    metadata: # aqui é o que estava dentro do metadata de um arquivo de pod isolado
+      labels:
+        app: meupod #aqui ao inves de name vai ser app
+    spec:
+        containers:
+          - name: site
+            image: fabricioveronez/web-page:green
+            ports:
+            - containerPort: 80
