@@ -1,7 +1,7 @@
 # ImersaoKeycloakChatgpt
 integration of applications. This application. where the users logs via SSO, connect to ChatGPT
 
-In the shoulders of Giants. All merit for @fabricioveronez, who is the provider of this code. I've just adampted the yaml file for worlinkg without grafana.
+In the shoulders of Giants. All merit for @fabricioveronez, who is the provider of this code. I've just adapted the yaml file for worlinkg without grafana.
 The objective of this tutorial is manually practicing kubernetes.
 
 passar aula 2 kubernetes pro meu github, fazendo algumas adaptações, e testar em uma nova maquina virtual que criarei
