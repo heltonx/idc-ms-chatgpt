@@ -213,4 +213,4 @@ e testar em
 localhost:3000/
 
 no ultimo teste abriu a janela da aplicação mas quando dava enter
-não rodava o chat
+depois testei novmente em um ambiente mais "limpo", no outro dia, sem sujeira de testes do mesmo dia, ai deu certo
