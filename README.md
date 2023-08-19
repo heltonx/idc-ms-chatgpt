@@ -10,8 +10,6 @@ mostrar como testar nas ferramentas dbeaver e postman
 
 mostrar como compilar, ou como foi compilada a imagem docker - e inclusive fazer uma imagem docker minha e colocar no meu docker
 
-creditar o veronez
-
 anotar as dependencias, k3d, kubectl, conta docker logada
 
 ..........
