@@ -10,25 +10,34 @@ The purpose is adapting with the main commands (kubectl, k3d, docker, etc).
 Im using too Dbeaver, for testing the database, and postman (test api)
 
 
-also showing how to compile the docker images and uploading to my docker repository
+also show how to compile the docker images and uploading to my docker repository
 
 
+take notes of the dependencies: k3d, kubect, docker account on, on the terminal, etc
 anotar as dependencias, k3d, kubectl, conta docker logada
 
 
-
-..........
-dar um df -h
-se tiver muito cheio dar um docker system prune -af --volumes
-mas usar com sabedoria é um comando muito poderoso, ver o que fazem os parametros
+-----
 
 
-criar cluster
+type: df -h
+
+if the disk spaces aren't that empty, 
+type: 
+docker system prune -af --volumes
+
+but use that with wisdom, because its a powerfull command
+-----
+
+
+
+create cluster
 k3d cluster create meucluster --servers 1 --agents 1 -p "3000:30000@loadbalancer" -p "8080:30001@loadbalancer"
 
 kubectl get nodes
 
 watch kubectl get po
+
 
 
 ------
