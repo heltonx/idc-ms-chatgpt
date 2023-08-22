@@ -1,16 +1,21 @@
 # ImersaoKeycloakChatgpt
 integration of applications. This application. where the users logs via SSO, connect to ChatGPT
 
-In the shoulders of Giants. All merit for @fabricioveronez, who is the provider of this code. I've just adapted the yaml file for worlinkg without grafana.
+In the shoulders of Giants. All merit for , who is the provider of this code. I've just adapted the yaml file for worlinkg without grafana.
 The objective of this tutorial is manually practicing kubernetes.
 
-passar aula 2 kubernetes pro meu github, fazendo algumas adaptações, e testar em uma nova maquina virtual que criarei
-copiar comandos
-mostrar como testar nas ferramentas dbeaver e postman
 
-mostrar como compilar, ou como foi compilada a imagem docker - e inclusive fazer uma imagem docker minha e colocar no meu docker
+This "project" is based on class 2 of @fabricioveronez Devops Imerson, i did some adaptations, Im using virtual machine xubuntu 22, with 40GB disk and 3or 4 GB RAM.
+The purpose is adapting with the main commands (kubectl, k3d, docker, etc).
+Im using too Dbeaver, for testing the database, and postman (test api)
+
+
+also showing how to compile the docker images and uploading to my docker repository
+
 
 anotar as dependencias, k3d, kubectl, conta docker logada
+
+
 
 ..........
 dar um df -h
