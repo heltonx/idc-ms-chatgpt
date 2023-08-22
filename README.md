@@ -27,11 +27,13 @@ type:
 docker system prune -af --volumes
 
 but use that with wisdom, because its a powerfull command
+
 -----
 
 
 
-create cluster
+create cluster:
+
 k3d cluster create meucluster --servers 1 --agents 1 -p "3000:30000@loadbalancer" -p "8080:30001@loadbalancer"
 
 kubectl get nodes
