@@ -1,4 +1,8 @@
 testing
 
 
-https://www.youtube.com/watch?v=l5VYvVGbuOI&list=PLXg0qpOisVvF4tXcqa55fBfQ1FRTA6ERw&index=4&ab_channel=InstitutoMukharajjBrasilan%28IMUB%29
+main () {
+ a = b;
+print b;
+
+}
