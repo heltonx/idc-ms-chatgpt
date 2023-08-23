@@ -43,27 +43,30 @@ watch kubectl get po
 
 
 ------
-fazer o build 
+
+doing the build:
 
 cd chatservice
 sudo docker built -t heltonx/imersao-chatservice:v1 .
 
-ver se a imagem foi criada
+check if the image was created
 docker image ls
 
-subir a imagem (nao é necessario, ja que ela está baixada e vai dar pra usar no yaml, mas é pra aprender)
+upload the image (not necessary, if it is already downloaded, and referenced in the yaml, but its to learn)
 docker logout
 docker login
 
 docker push heltonx/imersao-chatservice:v1 
 
-subindo com a latest porque é uma boa prática subir com a latest também
+uploading with the latest also, because its a best practice upload with the latest also
 
 docker tag heltonx/imersao-chatservice:v1 heltonx/imersao-chatservice:latest
 
 docker push heltonx/imersao-chatservice:latest
 
-conferir no docker web seus repositorios
+check in the docker web account your repositories
+https://hub.docker.com
+
 -------
 
 voltando ao processo
