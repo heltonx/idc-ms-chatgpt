@@ -1,8 +1,0 @@
-testing
-
-
-main () {
- a = b;
-print b;
-
-}
