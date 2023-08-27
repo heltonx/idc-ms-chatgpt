@@ -69,26 +69,23 @@ https://hub.docker.com
 
 -------
 
-voltando ao processo
+getting back to the process
 
-cd .. (voltar para a pasta idc-ms-chatgpt)
+cd .. (get bach to the directory idc-ms-chatgpt)
 
-
-processo de criar conta na openia e puxar a APIKey anotar aqui
-criar conta no openia
+creating account in the openia and copy API, notes here:
+create account
 https://platform.openai.com/
 personal
 view api keys
 create new secret key
-copiar a key
+copy the a key
 
-ou também ver o uso, no menu usage
+or, also, check the usage, in the menu usage
 
-
-e colocar a api no campo value do deployment do arquivo do chatservice, exemplo:
+and put the api at field value, in the deployment yaml of the chatservice, example:
 name: OPENAI_API_KEY
 value: "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"
-
 
 kubectl apply -f k8s/deploy-chatservice2.yaml
 
