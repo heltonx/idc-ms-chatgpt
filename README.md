@@ -91,22 +91,23 @@ kubectl apply -f k8s/deploy-chatservice2.yaml
 
 
 -----------------
-teste do dbeaver
 
-como tá rodando clusterIP tem que utilizar o port forward
+testing dbeaver
+
+due we are running clusterIP, you have to use the port forward
 kubectl port-forward po/chatservice-mysql-77d4ffc69d-4l2gl 3306:3306 #depois só mudar o nome do pod
 
-dai no dbeaver dar um new database connection
+so in dbeaver, press new database connection
 mysql
 database chat_service
 senha root
-test connection - se der erro de publick key ir na aba driverproperties e na flag
-allowpublicKeyRetrieval setar como true
+test connection - if you get an error of publick key, go to tab driverproperties and in the flag
+allowpublicKeyRetrieval, set true
 
-não tem problema nao ter tabela agora, pois só depois quando executar a aplicação vai ser feita
-a operação de criar as tabelas, a migration por exemplo
+dont problem if we dont have tables for now, because later (when we execute the application) will be execute the operation of create tables, the migration for example
 
-feito o teste, pode cancelar o port forward
+done the test, you can cancel  the port forward
+
 -----------------
 
 continuando
