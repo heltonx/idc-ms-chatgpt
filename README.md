@@ -85,6 +85,7 @@ or, also, check the usage, in the menu usage
 
 and put the api at field value, in the deployment yaml of the chatservice, example:
 name: OPENAI_API_KEY
+
 value: "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"
 
 kubectl apply -f k8s/deploy-chatservice2.yaml
@@ -95,12 +96,17 @@ kubectl apply -f k8s/deploy-chatservice2.yaml
 testing dbeaver
 
 due we are running clusterIP, you have to use the port forward
+
 kubectl port-forward po/chatservice-mysql-77d4ffc69d-4l2gl 3306:3306 #depois só mudar o nome do pod
 
 so in dbeaver, press new database connection
+
 mysql
+
 database chat_service
-senha root
+
+password root
+
 test connection - if you get an error of publick key, go to tab driverproperties and in the flag
 allowpublicKeyRetrieval, set true
 
