@@ -119,23 +119,23 @@ done the test, you can cancel  the port forward
 continuando
 
 -----------------
-teste no postman
+test in postman
 
-estar logado no postman, senao tem conta criar
-
+be logged in postman, otherwise you have to create it
 
 create new collection
 
 file new
-vai mostrar os tipos de endpoint pra conectar, escolher gRPC
+it will show endpoint types for connection, so choose gRPC
 
-no campo search an API, selecionar importar um protofile
-vai estar em chatservice/proto
+at field search an API, select import a protofile
+
+it will be in chatservice/proto
 next
 import as a api
 using new api
-volta na aba da request
-campo select a method - ChatStream
+go back to tab of request
+field select a method - ChatStream
 enter a url - grpc://localhost:50051
 
 aba authorization / type API Key:
