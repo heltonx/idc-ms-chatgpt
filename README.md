@@ -9,16 +9,12 @@ This "project" is based on class 2 of @fabricioveronez Devops Imerson, i did som
 The purpose is adapting with the main commands (kubectl, k3d, docker, etc).
 Im using too Dbeaver, for testing the database, and postman (test api)
 
-
 also show how to compile the docker images and uploading to my docker repository
 
-
 take notes of the dependencies: k3d, kubect, docker account on, on the terminal, etc
-anotar as dependencias, k3d, kubectl, conta docker logada
-
+take notes the dependencies, k3d, kubectl, account docker logged
 
 -----
-
 
 type: df -h
 
@@ -116,7 +112,7 @@ done the test, you can cancel  the port forward
 
 -----------------
 
-continuando
+continuing
 
 -----------------
 test in postman
@@ -138,12 +134,12 @@ go back to tab of request
 field select a method - ChatStream
 enter a url - grpc://localhost:50051
 
-aba authorization / type API Key:
+tab authorization / type API Key:
 Key: Authorization
-Value: 123456 (que é o ques está definido no código da aplicação arwuivo chat-service-client.ts linha 6)
+Value: 123456 
+(it is what is defined in the aplication code, file chat-service-client.ts line 6)
 
-
-aba messagem - POST (está api/chat.http):
+tab messagem - POST (está api/chat.http):
 
 {
     "chat_id": "a14fc851-7e95-49b5-a5b5-44479434becd",
@@ -151,20 +147,21 @@ aba messagem - POST (está api/chat.http):
     "user_message": "continue"
 }
 
-nao vai funcionar ainda, pois se der um kubectl get svc
-vai mostrar que é clusterip, ou seja tem que expor manualmente, via port forward
+
+it will no work yet, because, if you type "kubectl get svc"
+it will show is clusterIp, in other words, you have to expose manually, via port forward
 
 kubectl port-forward svc/chatservice 50051:50051
 
-se ainda nao for (ANOTAR ERRO AQUI) é porque tem que matar o pod do serviço, pois nao reconheceu o mysql
+if not work yet (ANOTE THE ERROR HERE) its becaus you have to kill the service pod, because it did not recognized the mysql
 kubectl get po
 kubectl delete po chatservice-7c6777bc56-662vq
 
-o pod sera criado novamente
+the pode will be created again
 
-dar um invoke no postman
-depois cancelar
-e pode cancelar esse port forward também
+do the invoke in the postman
+and, after, you can cancel
+and you can cancel this port forward also
 
 -----------------
 
