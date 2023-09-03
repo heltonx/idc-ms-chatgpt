@@ -165,13 +165,13 @@ and you can cancel this port forward also
 
 -----------------
 
-continuando
+continuing
 
 -----------------
 
-subindo keycloak
+uping keycloak
 
-adicionar no /etc/hosts
+add at /etc/hosts
 127.0.0.1 keycloak
 
 kubectl apply -f k8s/deploy-keycloak2.yaml 
@@ -198,24 +198,24 @@ Web origins: *
 Next
 Save
 
-aba credentials
+tab credentials
 
-copiar client secret
-colocar no arquivo deploy-webapp em
+copy client secret
+put in the file deploy-webapp at
         - name: KEYCLOAK_CLIENT_SECRET
           value: cGx2n9Dix3LKwYz2V0fKg58afHFhu8Dq
 
 Users
 Add User
-Username: escolher
-email: escolher
+Username: choose
+email: choose
 
 create
 aba credentials
 set password
 123456
 temporary OFF
-salvar
+save
 
 -----------------
 
