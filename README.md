@@ -226,11 +226,12 @@ continuando
 
 kubectl apply -f k8s/deploy-webapp2.yaml
 
-se nao der de primeira dar um 
+if it did not work at first time, do this command:
 kubectl delete po webapp-8b7f7c6cb-ls8lg (exemplo, pois o nome do pod vai estar diferente)
 
-e testar em 
+and test in 
 localhost:3000/
 
-no ultimo teste abriu a janela da aplicação mas quando dava enter
-depois testei novmente em um ambiente mais "limpo", no outro dia, sem sujeira de testes do mesmo dia, ai deu certo
+
+it was not working,
+but after I tested at a cleaner enviroment, in the next day, without dirt, so it worked
