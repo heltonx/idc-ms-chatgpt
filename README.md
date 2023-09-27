@@ -22,6 +22,9 @@ k3d installation:
 https://k3d.io/v5.4.6/#installation
 (session installation)
 
+kubectl installation:
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
+(session install-kubectl-binary-with-curl-on-linux)
 
 -----
 
