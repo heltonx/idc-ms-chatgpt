@@ -14,6 +14,11 @@ also show how to compile the docker images and uploading to my docker repository
 take notes of the dependencies: k3d, kubect, docker account on, on the terminal, etc
 take notes the dependencies, k3d, kubectl, account docker logged
 
+install docker:
+https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+(session install-using-the-repository)
+
+
 -----
 
 type: df -h
