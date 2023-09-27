@@ -18,6 +18,10 @@ install docker:
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 (session install-using-the-repository)
 
+k3d installation:
+https://k3d.io/v5.4.6/#installation
+(session installation)
+
 
 -----
 
