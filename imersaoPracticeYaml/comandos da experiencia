@@ -1,0 +1,128 @@
+comandos diversos durante as praticas
+
+esperar os nodes terminarem de ser criados (que é quando se cria o cluster) para criar o pod
+kubectl get nodes
+
+docker container ls
+k3d cluster list
+k3d cluster create meucluster --no-lb
+
+k3d cluster delete
+k3d cluster delete meucluster
+
+code .
+
+
+
+kubectl create -f meupod.yaml
+
+kubectl get pods
+kubectl describe pod meupod
+kubectl describe pod meu2pod | grep Label
+
+kubectl get pods wide
+kubectl get pods -o wide
+kubectl port-forward pod/meupod 8080:80
+
+
+aws sts get-caller-identity
+aws eks update-kubeconfig --name eks-imersao
+
+kubectl get svc
+aws eks update-kubeconfig --name eks-imersao --region us-west-1
+
+
+kubectl edit configmap aws-auth -n kube-system
+
+
+k3d cluster create --servers 2 --agents 2 clueless
+
+#selector (-l) baseado na label informada no yaml
+kubectl get pods -l app=segundo
+
+#deleta os pods instanciados do arquivo, mas não deleta o arquivo
+kubectl delete -f meupod.yaml
+
+
+kubectl api-resources
+kubectl api-resources | grep pod
+kubectl api-resources | grep Replica
+
+kubectl get replicaset # ou rs
+
+#mostra onde está sendo executado
+kubectl get po -o wide
+
+#detalhes do replicaset em execução
+kubectl describe replicaset meureplicaset
+
+#dá o apply e junto já observa o que acontece
+kubectl apply -f meureplicaset.yaml && watch 'kubectl get po'
+
+
+#porém para atualizar os pods quando tem troca de versão (exemplo, de blue para green)
+o replicaset não atualiza automaticamente - tem que excluir cada pod pra ser gerado um novo baseado
+na mudança no replicaset
+é pra isso que existe o deploy
+se é criado um arquivo de deploy, e se trocar a versao dentro do deploy e der o kubectl apply
+ele automaticamente vai deletando os pods com a versão antiga e criando os com a versão nova
+não existe downtime nesse caso
+
+
+
+quando se faz um arquivo de deployment, intrinscecamente se faz um arquivo de replicaset
+
+
+kubectl get deployment
+
+quando se faz uma alteração de versão de imagem e se dá um apply, e der um kubectl get replicaset,
+vão aparecer as versões antigas de replica set
+
+#para ver os deployments antigos
+kubectl rollout history deployment meudeployment
+
+#faz o rollback para o ultimo deployment em vigor
+kubectl rollout undo deployment meudeployment
+
+
+Services (SVC) são os componentes que vão gerenciar a comunicação com o exterior
+do cluser e internamene entre os pods
+
+
+kubectl get service
+
+kubectl get all
+
+
+
+E quando sobe-se um service e faz-se um cluster com bind de porta, 
+não precisa-se mais dar o comando port-forward
+para expor o serviço
+
+
+k3d cluster create meucluster --servers 3 --agents 3 -p "30000:30000@loadbalancer"
+
+
+quando da um docker container ls, vão ser listados os containers onde 
+estao os nodes (worknodes e control panels) do cluster
+e nesse comando vai ser mostrado também o container que está como loadbalancer
+e é ele quem vai estar com bind de porta
+
+#aqui é pra criar um cluster fazendo bind de de duas portas para aplicação
+k3d cluster create meucluster --servers 2 --agents 2 -p "3000:30000@loadbalancer" -p "8080:30001@loadbalancer"
+
+quando se vai clonar um repositorio para testes locais
+git clone https://github.com/KubeDev/idc-ms-chatgpt.git
+
+
+buildado a imagem e já dando nome e versao
+docker build -t fabricioveronez/imersao-chatservice:v1 .
+
+docker images ls 
+ou
+docker images
+
+docker login
+
+kubectl logs chatservice-mysql-77d4ffc69d-ht8m7
+
