@@ -26,6 +26,12 @@ kubectl installation:
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
 (session install-kubectl-binary-with-curl-on-linux)
 
+
+exemplos de comandos:
+ kubectl apply -f k8s/deploy-webapp2.yaml 
+ 
+ os .yaml que estavam funcionados eram os com final 2
+ 
 -----
 
 type: df -h
