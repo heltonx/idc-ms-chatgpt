@@ -44,7 +44,7 @@ but use that with wisdom, because its a powerfull command
 
 -----
 
-
+git clone https://github.com/heltonx/idc-ms-chatgpt.git
 
 create cluster:
 
