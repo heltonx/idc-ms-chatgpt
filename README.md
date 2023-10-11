@@ -26,6 +26,8 @@ kubectl installation:
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#install-kubectl-binary-with-curl-on-linux
 (session install-kubectl-binary-with-curl-on-linux)
 
+install dbeaver:
+https://www.edivaldobrito.com.br/dbeaver-no-ubuntu-e-derivados/
 
 exemplos de comandos:
  kubectl apply -f k8s/deploy-webapp2.yaml 
